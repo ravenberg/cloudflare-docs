@@ -17,11 +17,7 @@ Refer to [Find zone and account IDs](/fundamentals/setup/find-account-and-zone-i
 ## Make your first API request
 
 ```curl
-curl --request POST \
-  --url https://api.cloudflare.com/client/v4/accounts/<ACCOUNT_ID>/images/v1 \
-  --header 'Authorization: <API_TOKEN> \
-  --header 'Content-Type: multipart/form-data' \
-  --form file=@./<YOUR_IMAGE.IMG>
+curl -X POST -F file=@./<YOUR_IMAGE.IMG> -H "Authorization: Bearer <API_TOKEN>" https://api.cloudflare.com/client/v4/accounts/<ACCOUNT_ID>/images/v1
 ```
 
 ## Enable transformations
